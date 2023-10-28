@@ -1,0 +1,12 @@
+#Stop Unity Scheduler Services
+clear-host
+Get-Service -Name "Hyland Full-Text Server" -ComputerName onbase-proc-q02 | Set-Service -Status Stopped -WarningAction SilentlyContinue
+Get-Service -Name "Hyland Unity Scheduler - API Distribution 2-1" -ComputerName onbase-proc-q02 | Set-Service -Status Stopped -WarningAction SilentlyContinue
+Get-Service -Name "Hyland Unity Scheduler - API Distribution 2-2" -ComputerName onbase-proc-q02 | Set-Service -Status Stopped -WarningAction SilentlyContinue
+Get-Service -Name "Hyland Unity Scheduler - Distribution Queue 2-1" -ComputerName onbase-proc-q02 | Set-Service -Status Stopped -WarningAction SilentlyContinue
+Get-Service -Name "Hyland Unity Scheduler - Document Holding 2-1" -ComputerName onbase-proc-q02 | Set-Service -Status Stopped -WarningAction SilentlyContinue
+Get-Service -Name "Hyland Unity Scheduler - Document Holding 2-2" -ComputerName onbase-proc-q02 | Set-Service -Status Stopped -WarningAction SilentlyContinue
+Get-Service -Name "Hyland Unity Scheduler - General Workflow 2-1" -ComputerName onbase-proc-q02 | Set-Service -Status Stopped -WarningAction SilentlyContinue
+Get-Service -Name "Hyland Unity Scheduler - Inbound Sorting 2-1" -ComputerName onbase-proc-q02 | Set-Service -Status Stopped -WarningAction SilentlyContinue
+Get-Service -Name "Hyland Unity Scheduler - Inbound Sorting 2-2" -ComputerName onbase-proc-q02 | Set-Service -Status Stopped -WarningAction SilentlyContinue
+Write-Host "Services Stopped"
